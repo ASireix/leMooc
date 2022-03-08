@@ -12,7 +12,8 @@ public class PlayerMovements : MonoBehaviour
     Rigidbody body;
 
     public float jumpForce = 1f;
-    public float distToGround = 1f;
+
+    public GroundCheck groundCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -23,13 +24,12 @@ public class PlayerMovements : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-
         directionVector = context.ReadValue<Vector2>();
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (isGrounded && context.performed)
+        if (groundCheck.isGrounded && context.performed)
         {
             body.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
@@ -41,13 +41,6 @@ public class PlayerMovements : MonoBehaviour
         Vector3 movement = new Vector3(0, 0, -directionVector.x).normalized;
         body.MovePosition(transform.position + (movement * speed * Time.deltaTime));
 
-        if (Physics.Raycast(transform.position, Vector3.down, distToGround + 0.1f))
-        {
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
-        }
+        
     }
 }

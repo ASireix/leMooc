@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovements : MonoBehaviour
 {
-    public bool isGrounded;
     Vector2 directionVector;
 
     public float speed = .8f;
@@ -19,12 +18,20 @@ public class PlayerMovements : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody>();
-        isGrounded = true;
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
+
         directionVector = context.ReadValue<Vector2>();
+        if (directionVector.x < -0.5f)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        if (directionVector.x > 0.5f)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
     public void OnJump(InputAction.CallbackContext context)

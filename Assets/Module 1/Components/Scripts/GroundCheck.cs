@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
+    [HideInInspector]
     public bool isGrounded;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)

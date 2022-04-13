@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class AnimationEventTest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioClip stepSound;
+    Animator anim;
+    AudioSource audioSource;
+
+    private void Start()
     {
-        
+        if (!anim)
+        {
+            anim = GetComponent<Animator>();
+        }
+
+        if (!audioSource)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Steps()
     {
-        
+        audioSource.PlayOneShot(stepSound);
     }
 }

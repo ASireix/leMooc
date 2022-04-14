@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d7328765c3958c7459782f6ada11b403
+guid: b6e6a62eb506d9c4fa2c4a3cf058d676
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Texture
-    second: {fileID: 2100000, guid: 0d2d4c45d4e0f734d99c4ecbd42f75de, type: 2}
+      name: Glowing
+    second: {fileID: 2100000, guid: bbfc54cad9ea19b4c94293e0f78ce598, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlatformMetal
+    second: {fileID: 2100000, guid: 45f635b70b106ef49a7659e55b3e0bd3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

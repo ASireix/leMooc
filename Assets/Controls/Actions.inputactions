@@ -2,7 +2,7 @@
     "name": "Actions",
     "maps": [
         {
-            "name": "Movements",
+            "name": "Player",
             "id": "4ca8b156-e1e3-46e8-bc2e-a9946b813e45",
             "actions": [
                 {
@@ -27,6 +27,15 @@
                     "name": "Shoot",
                     "type": "Button",
                     "id": "ba957cc9-deb1-4ae8-aec3-98165699b215",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Aim",
+                    "type": "Button",
+                    "id": "fe8cd961-9671-4adc-824c-a31f5231145e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -86,6 +95,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e1abef1e-2a5a-4cea-839d-6ea438c6f70a",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

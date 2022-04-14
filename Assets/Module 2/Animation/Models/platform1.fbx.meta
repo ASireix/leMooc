@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d7328765c3958c7459782f6ada11b403
+guid: cbd97e25188cbd04b8deaae8914ce27d
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Texture
-    second: {fileID: 2100000, guid: 0d2d4c45d4e0f734d99c4ecbd42f75de, type: 2}
+      name: PlatformBrilant
+    second: {fileID: 2100000, guid: 279afe8941c6d3a40ad17212a9c64af6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

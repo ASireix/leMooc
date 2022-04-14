@@ -5,6 +5,8 @@ using UnityEngine;
 public class AnimationEventTest : MonoBehaviour
 {
     public AudioClip stepSound;
+    public AudioClip shootSound;
+    public AudioClip aimSound;
     Animator anim;
     AudioSource audioSource;
 
@@ -21,8 +23,18 @@ public class AnimationEventTest : MonoBehaviour
         }
     }
 
-    public void Steps()
+    public void StepsSound()
     {
         audioSource.PlayOneShot(stepSound);
+    }
+
+    public void AimSound()
+    {
+        audioSource.PlayOneShot(aimSound);
+    }
+
+    public void ShootSound()
+    {
+        audioSource.PlayOneShot(shootSound);
     }
 }
